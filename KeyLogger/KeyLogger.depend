@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1436708533 source:d:\mehnat\c++\keylogger\main.cpp
+	<iostream>
+	<windows.h>
+	<Winuser.h>
+	<fstream>
+
