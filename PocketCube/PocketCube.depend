@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1451535556 source:d:\mehnat\c++\pocketcube\main.cpp
+	<iostream>
+	<queue>
+	<algorithm>
+	<cstring>
+	<vector>
+	<set>
+
