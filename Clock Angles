@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+    int h,m,ha;
+    double a;
+
+    while(h!=0) {
+            cout <<endl<<endl<<"ENTER THE HOUR HAND READING(PRESS 0 to EXIT): ";
+            cin>> h;
+            cout<<"ENTER THE MINUTE HAND READING: ";
+            cin>> m;
+            a=(30*h)-(5.5*m);
+    if(a>=0)
+    cout<<"\nTHE ANGLE BETWEEN THE MINUTE HAND AND THE HOUR HAND OF THE CLOCK MEASURED CLOCKWISE FROM THE MINUTE HAND IS: "<<a<<endl;
+    else
+    cout<<"\nTHE ANGLE BETWEEN THE MINUTE HAND AND THE HOUR HAND OF THE CLOCK MEASURED ANTICLOCKWISE FROM THE MINUTE HAND IS: "<< -1*a<<endl;
+    if(h==0)
+        break;
+    }
+cin>>ha;
+}
