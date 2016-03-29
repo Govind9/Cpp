@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1407667521 source:g:\mehnat\number system\main.cpp
+	<iostream>
+	"numsys.h"
+
+1407671428 g:\mehnat\number system\numsys.h
+	<iostream>
+	<cstring>
+
