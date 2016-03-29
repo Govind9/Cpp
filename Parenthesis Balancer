@@ -1,0 +1,82 @@
+#include <iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+    ifstream f("abc.cpp");
+    char ch;
+    int curly=0;
+    int round=0;
+    int left=0;
+    int line=1;
+    while(f.get(ch))
+    {
+        if(ch=='\n')
+        line++;
+        switch(ch)
+        {
+            case '{': curly++;
+            break;
+            case '}' : curly--;
+            break;
+            case '(' : round++;
+            left++;
+            break;
+            case ')' :round--;
+            break;
+            default: break;
+        }
+    }
+    f.close();
+    if(curly==0&&round==0)
+        cout<<"Set 22 tera program!\n";
+    else
+    {
+        if(curly)
+           {
+               if(curly>0)
+           cout<<line<<"MISSING '}' AT THE END\n";
+           else
+           cout<<line<<"MISSING '{' AT THE END\n";
+           }
+        if(round)
+        {
+            line =1;
+            if(round>0)
+            {
+                f.open("abc.cpp");
+                while(f.get(ch))
+                {
+                    if(ch=='\n')
+                    line++;
+                    if(ch=='(')
+                        left--;
+                    if(left<round)
+                    {
+                        cout<<line<<"\tEXPECTED ')' HERE\n";
+                        round--;}
+                }
+                f.close();
+            }
+            else
+            {
+                f.open("abc.cpp");
+                while(f.get(ch))
+                {
+                    if(ch=='\n')
+                    line++;
+                    if(ch==')')
+                        left--;
+                    if(left>round)
+                      {
+
+                      cout<<line<<"\tEXPECTED '(' HERE\n";
+                        round++;}
+                }
+                f.close();
+            }
+        }
+    }
+    return 0;
+}
