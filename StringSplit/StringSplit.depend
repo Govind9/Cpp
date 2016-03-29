@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1452341631 source:d:\mehnat\c++\stringsplit\main.cpp
+	<iostream>
+	<cstring>
+	<vector>
+
