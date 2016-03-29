@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1443934629 source:d:\mehnat\c++\reversetyping2.0\main.cpp
+	<iostream>
+	<windows.h>
+	<cstring>
+
